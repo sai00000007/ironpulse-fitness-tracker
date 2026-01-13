@@ -19,10 +19,15 @@ track workouts, calculate BMI, and receive ML-based fitness recommendations.
 
 ## 📂 Project Structure
 gym_tracker/
+
 ├── app.py
+
 ├── ml/
+
 ├── static/
+
 ├── templates/
+
 └── .gitignore
 
 
