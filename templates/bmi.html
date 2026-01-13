@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="bmi-wrapper">
+
+    <div class="bmi-card bmi-input">
+        <h2>🧮 BMI Calculator</h2>
+
+        <form id="bmiForm">
+            <label>Height (cm)</label>
+            <input type="number" name="height" required>
+
+            <label>Weight (kg)</label>
+            <input type="number" name="weight" required>
+
+            <button type="submit" class="btn full">Calculate BMI</button>
+        </form>
+    </div>
+
+    <div class="bmi-card bmi-output" id="bmiResult" style="display:none;">
+        <h2 id="bmiValue">BMI: 0</h2>
+
+        <p id="goalText"></p>
+        <p id="splitText"></p>
+        <p id="calorieText"></p>
+
+        <div class="chart-card">
+            <canvas id="calorieChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <canvas id="daysChart"></canvas>
+        </div>
+        <div class="ml-charts reveal">
+    <div class="ml-chart-box">
+        <canvas id="calorieChart"></canvas>
+    </div>
+    <div class="ml-chart-box">
+        <canvas id="daysChart"></canvas>
+    </div>
+</div>
+
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+<script>
+let calorieChart, daysChart;
+
+document.getElementById("bmiForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const height = this.height.value;
+    const weight = this.weight.value;
+    const bmi = (weight / ((height / 100) ** 2)).toFixed(2);
+
+    fetch("/ml-predict", {
+        method: "POST",
+        body: new URLSearchParams({ height, weight, bmi })
+    })
+    .then(res => res.json())
+    .then(data => {
+        // ✅ Show result box
+        const resultBox = document.getElementById("bmiResult");
+        resultBox.style.display = "block";
+        resultBox.classList.add("active");
+
+        // ✅ Update text
+        document.getElementById("bmiValue").innerText = `BMI: ${bmi}`;
+        document.getElementById("goalText").innerHTML = `🎯 Goal: <b>${data.goal}</b>`;
+        document.getElementById("splitText").innerHTML = `🏋️ Split: <b>${data.split}</b>`;
+        document.getElementById("calorieText").innerHTML =
+            `🔥 Calories/day: <b>${data.calories}</b>`;
+
+        // ✅ Charts
+        const chartSection = document.querySelector(".ml-charts");
+chartSection.classList.add("active");
+
+setTimeout(() => {
+    renderCharts(data.calories, data.days);
+}, 300);
+;
+    })
+    .catch(err => {
+        console.error("ML Error:", err);
+        alert("Prediction failed. Check console.");
+    });
+});
+
+function renderCharts(calories, days) {
+
+    // Get canvas
+    const calorieCanvas = document.getElementById("calorieChart");
+    const daysCanvas = document.getElementById("daysChart");
+
+    // Destroy old charts
+    if (calorieChart) calorieChart.destroy();
+    if (daysChart) daysChart.destroy();
+
+    // 🔥 CALORIE BAR CHART
+    calorieChart = new Chart(calorieCanvas, {
+        type: "bar",
+        data: {
+            labels: ["Calories"],
+            datasets: [{
+                data: [calories],
+                backgroundColor: "#e53935",
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => `${ctx.raw} kcal/day`
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: "#ccc" },
+                    grid: { color: "rgba(255,255,255,0.1)" }
+                },
+                x: {
+                    ticks: { color: "#ccc" },
+                    grid: { display: false }
+                }
+            },
+            animation: { duration: 900 }
+        }
+    });
+
+    // 🔥 CENTER TEXT PLUGIN
+    const centerTextPlugin = {
+        id: "centerText",
+        beforeDraw(chart) {
+            const { ctx, width, height } = chart;
+            ctx.restore();
+            ctx.font = "bold 16px Arial";
+            ctx.fillStyle = "#fff";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(`${days} Days`, width / 2, height / 2);
+            ctx.save();
+        }
+    };
+
+    // 🔥 DAYS DONUT CHART
+    daysChart = new Chart(daysCanvas, {
+        type: "doughnut",
+        data: {
+            labels: ["Training", "Rest"],
+            datasets: [{
+                data: [days, 7 - days],
+                backgroundColor: ["#e53935", "#555"],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: "70%",
+            plugins: {
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        color: "#ccc",
+                        boxWidth: 14
+                    }
+                }
+            },
+            animation: { duration: 900 }
+        },
+        plugins: [centerTextPlugin]
+    });
+}
+
+</script>
+
+
+
+
+{% if bmi %}
+<div class="stat-box reveal">
+    <h3>{{ bmi }}</h3>
+    <p>{{ category }}</p>
+</div>
+{% endif %}
+
+{% endblock %}

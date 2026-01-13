@@ -1,0 +1,401 @@
+height,weight,bmi,goal,calories,split,days
+170,52,17.99,Muscle Gain,1797,Upper Lower,5
+154,47,19.82,Maintenance,1312,Full Body,3
+190,106,29.36,Weight Loss,1788,Full Body,3
+150,64,28.44,Weight Loss,1019,Upper Lower,4
+152,81,35.06,Weight Loss,1250,Upper Lower,4
+189,65,18.2,Muscle Gain,2195,Push Pull Legs,6
+161,99,38.19,Weight Loss,1503,Upper Lower,5
+153,85,36.31,Weight Loss,1249,Upper Lower,4
+155,110,45.79,Weight Loss,1515,Full Body,3
+178,59,18.62,Maintenance,1582,Full Body,3
+150,110,48.89,Weight Loss,1493,Full Body,4
+190,69,19.11,Muscle Gain,2226,Push Pull Legs,6
+174,98,32.37,Weight Loss,1629,Full Body,4
+182,49,14.79,Muscle Gain,1957,Push Pull Legs,5
+168,108,38.27,Weight Loss,1669,Upper Lower,5
+162,82,31.25,Weight Loss,1215,Full Body,3
+151,45,19.74,Muscle Gain,1573,Push Pull Legs,5
+171,109,37.28,Weight Loss,1630,Full Body,3
+158,104,41.66,Weight Loss,1508,Upper Lower,5
+155,84,34.96,Weight Loss,1297,Full Body,3
+171,86,29.41,Maintenance,1808,Upper Lower,4
+169,76,26.61,Weight Loss,1245,Full Body,3
+160,59,23.05,Muscle Gain,1844,Push Pull Legs,5
+172,73,24.68,Muscle Gain,2147,Upper Lower,4
+175,105,34.29,Weight Loss,1533,Full Body,3
+182,105,31.7,Weight Loss,1742,Full Body,3
+158,68,27.24,Maintenance,1547,Full Body,3
+179,99,30.9,Weight Loss,1542,Upper Lower,5
+186,92,26.59,Maintenance,1962,Full Body,4
+179,69,21.53,Muscle Gain,2104,Push Pull Legs,5
+158,50,20.03,Muscle Gain,1751,Upper Lower,4
+156,55,22.6,Maintenance,1405,Upper Lower,5
+184,50,14.77,Muscle Gain,2029,Bro Split,5
+166,80,29.03,Weight Loss,1235,Full Body,3
+187,95,27.17,Maintenance,1998,Upper Lower,5
+160,88,34.37,Weight Loss,1285,Full Body,4
+183,48,14.33,Muscle Gain,1947,Bro Split,5
+183,51,15.23,Muscle Gain,2014,Push Pull Legs,5
+173,71,23.72,Maintenance,1671,Upper Lower,5
+186,59,17.05,Muscle Gain,2033,Push Pull Legs,5
+168,51,18.07,Muscle Gain,1921,Bro Split,5
+173,75,25.06,Weight Loss,1318,Upper Lower,4
+153,48,20.5,Muscle Gain,1652,Bro Split,5
+168,45,15.94,Muscle Gain,1686,Push Pull Legs,6
+183,75,22.4,Maintenance,1773,Full Body,3
+167,68,24.38,Maintenance,1603,Upper Lower,5
+190,83,22.99,Maintenance,1897,Upper Lower,4
+165,66,24.24,Maintenance,1571,Full Body,4
+176,109,35.19,Weight Loss,1729,Upper Lower,4
+152,66,28.57,Weight Loss,1113,Full Body,4
+150,52,23.11,Maintenance,1337,Full Body,3
+168,58,20.55,Maintenance,1510,Full Body,4
+189,93,26.04,Weight Loss,1677,Full Body,3
+187,60,17.16,Muscle Gain,2143,Upper Lower,5
+182,50,15.09,Muscle Gain,1980,Bro Split,5
+177,106,33.83,Weight Loss,1651,Upper Lower,5
+178,84,26.51,Weight Loss,1492,Upper Lower,5
+163,56,21.08,Maintenance,1458,Upper Lower,5
+177,51,16.28,Muscle Gain,1914,Bro Split,5
+176,89,28.73,Weight Loss,1441,Upper Lower,5
+188,61,17.26,Muscle Gain,2093,Upper Lower,5
+182,104,31.4,Weight Loss,1579,Upper Lower,4
+165,55,20.2,Muscle Gain,1940,Upper Lower,4
+181,65,19.84,Maintenance,1661,Full Body,3
+161,46,17.75,Muscle Gain,1726,Upper Lower,4
+182,72,21.74,Maintenance,1737,Upper Lower,4
+166,45,16.33,Muscle Gain,1698,Push Pull Legs,5
+160,102,39.84,Weight Loss,1456,Full Body,4
+166,67,24.31,Maintenance,1587,Upper Lower,4
+184,47,13.88,Muscle Gain,1886,Upper Lower,4
+151,110,48.24,Weight Loss,1545,Full Body,3
+174,68,22.46,Maintenance,1647,Full Body,4
+178,54,17.04,Muscle Gain,2015,Upper Lower,4
+169,70,24.51,Maintenance,1636,Full Body,4
+166,91,33.02,Weight Loss,1471,Full Body,3
+151,102,44.73,Weight Loss,1522,Upper Lower,4
+168,104,36.85,Weight Loss,1483,Full Body,4
+179,80,24.97,Maintenance,1798,Upper Lower,5
+177,76,24.26,Maintenance,1746,Full Body,3
+183,48,14.33,Muscle Gain,1975,Upper Lower,4
+174,108,35.67,Weight Loss,1608,Upper Lower,5
+168,52,18.42,Muscle Gain,1838,Upper Lower,5
+178,51,16.1,Muscle Gain,1874,Bro Split,5
+167,51,18.29,Muscle Gain,1855,Bro Split,5
+157,97,39.35,Weight Loss,1438,Upper Lower,4
+181,48,14.65,Muscle Gain,1947,Upper Lower,5
+166,87,31.57,Weight Loss,1323,Upper Lower,4
+186,108,31.22,Weight Loss,1813,Full Body,3
+160,97,37.89,Weight Loss,1471,Full Body,4
+177,102,32.56,Weight Loss,1545,Full Body,4
+175,65,21.22,Muscle Gain,2083,Push Pull Legs,5
+179,59,18.41,Muscle Gain,1972,Push Pull Legs,5
+151,91,39.91,Weight Loss,1362,Upper Lower,4
+174,65,21.47,Maintenance,1617,Upper Lower,5
+150,105,46.67,Weight Loss,1446,Upper Lower,4
+176,83,26.79,Weight Loss,1431,Upper Lower,4
+183,90,26.87,Maintenance,1923,Full Body,4
+158,85,34.05,Weight Loss,1359,Full Body,4
+180,81,25.0,Maintenance,1815,Upper Lower,4
+171,93,31.8,Weight Loss,1478,Upper Lower,5
+151,89,39.03,Weight Loss,1339,Full Body,3
+185,69,20.16,Maintenance,1726,Upper Lower,5
+175,86,28.08,Maintenance,1833,Upper Lower,4
+157,82,33.27,Weight Loss,1341,Full Body,3
+185,93,27.17,Maintenance,1966,Full Body,3
+162,93,35.44,Weight Loss,1350,Full Body,3
+158,73,29.24,Maintenance,1597,Upper Lower,5
+168,95,33.66,Weight Loss,1508,Full Body,3
+187,82,23.45,Muscle Gain,2184,Upper Lower,5
+164,93,34.58,Weight Loss,1434,Upper Lower,5
+161,52,20.06,Maintenance,1406,Upper Lower,5
+180,96,29.63,Maintenance,1965,Upper Lower,4
+153,57,24.35,Maintenance,1406,Full Body,4
+176,79,25.5,Weight Loss,1301,Full Body,4
+171,96,32.83,Weight Loss,1434,Upper Lower,4
+163,86,32.37,Weight Loss,1345,Full Body,3
+159,72,28.48,Weight Loss,1143,Full Body,3
+161,77,29.71,Maintenance,1656,Full Body,3
+186,106,30.64,Weight Loss,1719,Upper Lower,4
+184,104,30.72,Weight Loss,1737,Full Body,3
+184,49,14.47,Muscle Gain,1826,Upper Lower,4
+152,69,29.86,Weight Loss,1058,Full Body,3
+185,63,18.41,Muscle Gain,2028,Upper Lower,5
+160,73,28.52,Weight Loss,1193,Upper Lower,4
+181,61,18.62,Muscle Gain,2120,Push Pull Legs,6
+150,73,32.44,Weight Loss,1203,Upper Lower,4
+181,83,25.34,Maintenance,1841,Full Body,3
+172,81,27.38,Weight Loss,1374,Full Body,4
+152,59,25.54,Maintenance,1420,Upper Lower,5
+176,95,30.67,Weight Loss,1514,Upper Lower,5
+179,64,19.97,Maintenance,1638,Full Body,3
+179,79,24.66,Maintenance,1788,Upper Lower,4
+156,85,34.93,Weight Loss,1214,Upper Lower,5
+155,84,34.96,Weight Loss,1242,Full Body,3
+151,94,41.23,Weight Loss,1286,Upper Lower,4
+178,81,25.56,Maintenance,1802,Upper Lower,4
+190,95,26.32,Maintenance,2017,Full Body,3
+178,76,23.99,Muscle Gain,2110,Bro Split,5
+190,97,26.87,Maintenance,2037,Upper Lower,4
+179,70,21.85,Muscle Gain,2091,Upper Lower,5
+180,78,24.07,Maintenance,1785,Full Body,3
+180,75,23.15,Maintenance,1755,Full Body,4
+150,80,35.56,Weight Loss,1183,Upper Lower,4
+154,81,34.15,Weight Loss,1323,Upper Lower,4
+163,89,33.5,Weight Loss,1482,Full Body,4
+164,110,40.9,Weight Loss,1602,Full Body,3
+181,97,29.61,Weight Loss,1553,Upper Lower,5
+177,81,25.85,Weight Loss,1422,Full Body,4
+164,84,31.23,Weight Loss,1324,Full Body,3
+189,71,19.88,Maintenance,1771,Upper Lower,5
+157,107,43.41,Weight Loss,1596,Upper Lower,4
+187,60,17.16,Muscle Gain,2102,Push Pull Legs,5
+189,89,24.92,Maintenance,1951,Upper Lower,5
+180,67,20.68,Maintenance,1675,Full Body,4
+167,89,31.91,Weight Loss,1426,Full Body,4
+179,106,33.08,Weight Loss,1617,Upper Lower,5
+154,106,44.7,Weight Loss,1423,Upper Lower,4
+187,52,14.87,Muscle Gain,1999,Push Pull Legs,5
+168,95,33.66,Weight Loss,1428,Upper Lower,4
+171,68,23.26,Maintenance,1628,Full Body,4
+154,89,37.53,Weight Loss,1379,Upper Lower,5
+186,67,19.37,Muscle Gain,2094,Push Pull Legs,6
+188,46,13.01,Muscle Gain,1878,Upper Lower,4
+159,65,25.71,Weight Loss,1154,Full Body,3
+156,96,39.45,Weight Loss,1515,Full Body,4
+161,46,17.75,Muscle Gain,1787,Push Pull Legs,5
+161,67,25.85,Weight Loss,1231,Full Body,3
+156,74,30.41,Weight Loss,1247,Upper Lower,4
+151,73,32.02,Weight Loss,1157,Upper Lower,5
+190,79,21.88,Maintenance,1857,Full Body,4
+184,57,16.84,Muscle Gain,2094,Push Pull Legs,6
+187,107,30.6,Weight Loss,1635,Full Body,3
+158,80,32.05,Weight Loss,1340,Upper Lower,4
+157,48,19.47,Maintenance,1341,Full Body,4
+165,79,29.02,Maintenance,1701,Full Body,3
+182,80,24.15,Muscle Gain,2232,Upper Lower,5
+190,56,15.51,Muscle Gain,2084,Push Pull Legs,5
+169,64,22.41,Muscle Gain,2036,Upper Lower,4
+182,93,28.08,Weight Loss,1498,Full Body,3
+152,69,29.86,Maintenance,1520,Full Body,3
+160,83,32.42,Weight Loss,1227,Upper Lower,4
+176,86,27.76,Weight Loss,1437,Full Body,3
+173,59,19.71,Muscle Gain,1901,Bro Split,5
+164,50,18.59,Muscle Gain,1766,Bro Split,5
+179,82,25.59,Weight Loss,1501,Full Body,3
+166,58,21.05,Maintenance,1497,Full Body,3
+178,93,29.35,Weight Loss,1457,Full Body,4
+162,101,38.48,Weight Loss,1408,Full Body,3
+174,99,32.7,Weight Loss,1651,Full Body,3
+173,58,19.38,Maintenance,1541,Upper Lower,4
+187,103,29.45,Weight Loss,1657,Full Body,3
+160,93,36.33,Weight Loss,1350,Full Body,3
+168,78,27.64,Weight Loss,1287,Full Body,3
+151,101,44.3,Weight Loss,1439,Upper Lower,5
+188,49,13.86,Muscle Gain,1847,Push Pull Legs,5
+171,48,16.42,Muscle Gain,1810,Upper Lower,5
+182,53,16.0,Muscle Gain,1969,Upper Lower,5
+158,98,39.26,Weight Loss,1521,Upper Lower,4
+163,94,35.38,Weight Loss,1468,Full Body,4
+170,84,29.07,Weight Loss,1461,Full Body,3
+183,45,13.44,Muscle Gain,1942,Push Pull Legs,5
+151,64,28.07,Maintenance,1463,Full Body,3
+168,50,17.72,Muscle Gain,1915,Bro Split,5
+168,105,37.2,Weight Loss,1624,Upper Lower,5
+170,98,33.91,Weight Loss,1435,Upper Lower,5
+165,51,18.73,Muscle Gain,1729,Push Pull Legs,6
+188,69,19.52,Muscle Gain,2060,Push Pull Legs,5
+155,53,22.06,Maintenance,1378,Upper Lower,5
+163,86,32.37,Weight Loss,1366,Upper Lower,5
+164,80,29.74,Weight Loss,1394,Upper Lower,5
+171,63,21.55,Maintenance,1578,Upper Lower,4
+179,100,31.21,Weight Loss,1616,Upper Lower,4
+162,79,30.1,Weight Loss,1240,Upper Lower,5
+190,56,15.51,Muscle Gain,2051,Upper Lower,4
+187,85,24.31,Maintenance,1898,Full Body,3
+168,92,32.6,Weight Loss,1486,Full Body,4
+170,91,31.49,Weight Loss,1352,Full Body,3
+164,91,33.83,Weight Loss,1364,Full Body,3
+187,73,20.88,Muscle Gain,2135,Bro Split,5
+177,80,25.54,Weight Loss,1298,Full Body,4
+162,52,19.81,Muscle Gain,1771,Bro Split,5
+184,76,22.45,Maintenance,1790,Upper Lower,5
+187,103,29.45,Maintenance,2078,Upper Lower,5
+179,95,29.65,Maintenance,1948,Full Body,3
+159,91,36.0,Weight Loss,1480,Full Body,3
+183,89,26.58,Maintenance,1913,Upper Lower,5
+185,100,29.22,Maintenance,2036,Upper Lower,5
+158,94,37.65,Weight Loss,1433,Full Body,4
+158,51,20.43,Muscle Gain,1837,Push Pull Legs,5
+187,53,15.16,Muscle Gain,1975,Push Pull Legs,6
+177,87,27.77,Maintenance,1856,Full Body,3
+182,46,13.89,Muscle Gain,1795,Push Pull Legs,5
+160,69,26.95,Weight Loss,1182,Upper Lower,4
+180,73,22.53,Muscle Gain,2043,Push Pull Legs,5
+187,101,28.88,Maintenance,2058,Upper Lower,5
+162,85,32.39,Weight Loss,1242,Upper Lower,5
+150,93,41.33,Weight Loss,1394,Full Body,4
+175,100,32.65,Weight Loss,1628,Full Body,3
+185,53,15.49,Muscle Gain,1880,Push Pull Legs,6
+170,99,34.26,Weight Loss,1488,Upper Lower,5
+152,99,42.85,Weight Loss,1381,Upper Lower,4
+169,83,29.06,Maintenance,1766,Upper Lower,5
+178,90,28.41,Maintenance,1892,Upper Lower,4
+174,95,31.38,Weight Loss,1600,Full Body,4
+164,98,36.44,Weight Loss,1388,Full Body,3
+172,100,33.8,Weight Loss,1565,Full Body,3
+151,103,45.17,Weight Loss,1482,Upper Lower,5
+160,106,41.41,Weight Loss,1524,Upper Lower,5
+174,60,19.82,Muscle Gain,1896,Upper Lower,4
+183,94,28.07,Maintenance,1963,Upper Lower,5
+159,86,34.02,Weight Loss,1253,Full Body,4
+152,65,28.13,Maintenance,1480,Full Body,4
+164,51,18.96,Maintenance,1415,Upper Lower,4
+154,78,32.89,Weight Loss,1145,Upper Lower,5
+153,104,44.43,Weight Loss,1510,Upper Lower,4
+161,83,32.02,Weight Loss,1372,Upper Lower,4
+152,83,35.92,Weight Loss,1247,Full Body,4
+152,82,35.49,Weight Loss,1232,Full Body,3
+152,84,36.36,Weight Loss,1285,Full Body,3
+189,62,17.36,Muscle Gain,2049,Upper Lower,4
+177,62,19.79,Muscle Gain,1996,Push Pull Legs,5
+160,104,40.62,Weight Loss,1442,Upper Lower,4
+162,52,19.81,Maintenance,1412,Full Body,3
+181,78,23.81,Muscle Gain,2185,Bro Split,5
+181,101,30.83,Weight Loss,1529,Upper Lower,5
+160,80,31.25,Weight Loss,1362,Full Body,3
+156,65,26.71,Maintenance,1505,Full Body,3
+153,97,41.44,Weight Loss,1381,Upper Lower,5
+190,105,29.09,Maintenance,2117,Upper Lower,5
+190,52,14.4,Muscle Gain,1962,Bro Split,5
+164,56,20.82,Maintenance,1465,Upper Lower,4
+164,51,18.96,Muscle Gain,1843,Bro Split,5
+183,86,25.68,Maintenance,1883,Full Body,3
+188,46,13.01,Muscle Gain,1959,Bro Split,5
+166,76,27.58,Maintenance,1677,Full Body,4
+162,87,33.15,Weight Loss,1402,Full Body,4
+185,85,24.84,Muscle Gain,2190,Bro Split,5
+155,106,44.12,Weight Loss,1483,Upper Lower,4
+188,45,12.73,Muscle Gain,1913,Push Pull Legs,5
+190,56,15.51,Muscle Gain,1957,Upper Lower,5
+169,59,20.66,Maintenance,1526,Upper Lower,4
+172,62,20.96,Maintenance,1575,Full Body,4
+174,103,34.02,Weight Loss,1559,Full Body,4
+169,88,30.81,Weight Loss,1380,Upper Lower,5
+165,109,40.04,Weight Loss,1556,Full Body,4
+187,45,12.87,Muscle Gain,1841,Bro Split,5
+160,59,23.05,Muscle Gain,1899,Bro Split,5
+176,110,35.51,Weight Loss,1687,Upper Lower,4
+158,73,29.24,Weight Loss,1228,Upper Lower,4
+178,110,34.72,Weight Loss,1654,Upper Lower,4
+157,93,37.73,Weight Loss,1320,Full Body,4
+174,96,31.71,Weight Loss,1483,Upper Lower,5
+163,87,32.74,Weight Loss,1340,Upper Lower,5
+182,99,29.89,Maintenance,2007,Upper Lower,5
+173,86,28.73,Maintenance,1821,Upper Lower,4
+168,56,19.84,Maintenance,1490,Full Body,4
+180,104,32.1,Weight Loss,1640,Full Body,3
+179,58,18.1,Muscle Gain,1918,Upper Lower,5
+170,51,17.65,Muscle Gain,1930,Upper Lower,4
+185,74,21.62,Maintenance,1776,Full Body,4
+165,68,24.98,Muscle Gain,2045,Push Pull Legs,6
+160,81,31.64,Weight Loss,1374,Upper Lower,5
+168,80,28.34,Weight Loss,1291,Full Body,4
+185,96,28.05,Maintenance,1996,Full Body,3
+162,84,32.01,Weight Loss,1413,Full Body,4
+188,71,20.09,Muscle Gain,2117,Upper Lower,5
+155,49,20.4,Muscle Gain,1728,Upper Lower,5
+170,70,24.22,Muscle Gain,2046,Bro Split,5
+156,92,37.8,Weight Loss,1389,Full Body,4
+162,82,31.25,Weight Loss,1260,Upper Lower,4
+163,74,27.85,Weight Loss,1278,Full Body,4
+175,59,19.27,Muscle Gain,2040,Upper Lower,5
+162,56,21.34,Muscle Gain,1850,Upper Lower,4
+171,50,17.1,Muscle Gain,1895,Upper Lower,4
+155,82,34.13,Weight Loss,1331,Full Body,3
+153,86,36.74,Weight Loss,1344,Upper Lower,5
+169,50,17.51,Muscle Gain,1842,Upper Lower,4
+154,85,35.84,Weight Loss,1366,Full Body,4
+187,89,25.45,Weight Loss,1638,Upper Lower,4
+155,52,21.64,Maintenance,1368,Upper Lower,4
+177,97,30.96,Weight Loss,1614,Full Body,3
+158,101,40.46,Weight Loss,1574,Full Body,4
+176,108,34.87,Weight Loss,1751,Upper Lower,5
+151,70,30.7,Weight Loss,1136,Full Body,3
+184,62,18.31,Muscle Gain,2069,Push Pull Legs,5
+185,110,32.14,Weight Loss,1728,Full Body,3
+179,93,29.03,Maintenance,1928,Upper Lower,5
+182,104,31.4,Weight Loss,1560,Full Body,3
+158,79,31.65,Weight Loss,1167,Upper Lower,5
+185,49,14.32,Muscle Gain,1873,Bro Split,5
+161,97,37.42,Weight Loss,1545,Full Body,3
+164,55,20.45,Muscle Gain,1947,Upper Lower,4
+167,57,20.44,Maintenance,1493,Upper Lower,4
+190,52,14.4,Muscle Gain,2009,Bro Split,5
+157,106,43.0,Weight Loss,1449,Upper Lower,4
+154,46,19.4,Maintenance,1302,Full Body,3
+175,94,30.69,Weight Loss,1612,Upper Lower,5
+181,61,18.62,Maintenance,1621,Full Body,4
+177,93,29.68,Weight Loss,1505,Full Body,3
+185,94,27.47,Weight Loss,1499,Upper Lower,4
+161,53,20.45,Maintenance,1416,Full Body,4
+154,107,45.12,Weight Loss,1596,Upper Lower,4
+177,101,32.24,Weight Loss,1579,Full Body,3
+176,83,26.79,Weight Loss,1319,Full Body,3
+172,87,29.41,Weight Loss,1464,Full Body,4
+155,62,25.81,Weight Loss,1083,Upper Lower,5
+189,66,18.48,Muscle Gain,2072,Bro Split,5
+183,104,31.05,Weight Loss,1696,Upper Lower,4
+168,63,22.32,Muscle Gain,2035,Push Pull Legs,5
+177,100,31.92,Weight Loss,1676,Full Body,3
+158,96,38.46,Weight Loss,1437,Full Body,3
+164,106,39.41,Weight Loss,1606,Upper Lower,4
+190,73,20.22,Muscle Gain,2264,Bro Split,5
+150,82,36.44,Weight Loss,1139,Upper Lower,4
+157,81,32.86,Weight Loss,1245,Upper Lower,4
+170,62,21.45,Muscle Gain,1944,Bro Split,5
+153,75,32.04,Weight Loss,1119,Full Body,3
+182,64,19.32,Muscle Gain,2153,Push Pull Legs,6
+178,63,19.88,Maintenance,1622,Upper Lower,4
+175,81,26.45,Maintenance,1783,Upper Lower,4
+152,64,27.7,Maintenance,1470,Upper Lower,4
+188,69,19.52,Muscle Gain,2211,Bro Split,5
+166,105,38.1,Weight Loss,1553,Full Body,3
+181,61,18.62,Maintenance,1621,Upper Lower,5
+150,78,34.67,Weight Loss,1130,Upper Lower,5
+187,54,15.44,Muscle Gain,2055,Upper Lower,5
+166,98,35.56,Weight Loss,1525,Upper Lower,4
+183,45,13.44,Muscle Gain,1967,Bro Split,5
+190,46,12.74,Muscle Gain,1880,Push Pull Legs,6
+150,74,32.89,Weight Loss,1151,Upper Lower,5
+150,51,22.67,Muscle Gain,1781,Bro Split,5
+158,46,18.43,Muscle Gain,1718,Upper Lower,4
+160,63,24.61,Muscle Gain,2001,Upper Lower,4
+160,103,40.23,Weight Loss,1554,Full Body,3
+157,50,20.28,Muscle Gain,1704,Push Pull Legs,6
+180,58,17.9,Muscle Gain,1957,Upper Lower,4
+150,56,24.89,Maintenance,1377,Upper Lower,5
+185,91,26.59,Maintenance,1946,Full Body,4
+190,48,13.3,Muscle Gain,1859,Bro Split,5
+187,69,19.73,Maintenance,1738,Upper Lower,5
+163,79,29.73,Weight Loss,1250,Upper Lower,5
+170,104,35.99,Weight Loss,1592,Full Body,3
+157,65,26.37,Maintenance,1511,Upper Lower,4
+163,58,21.83,Maintenance,1478,Upper Lower,4
+158,49,19.63,Muscle Gain,1778,Push Pull Legs,5
+160,98,38.28,Weight Loss,1376,Upper Lower,5
+153,58,24.78,Maintenance,1416,Upper Lower,5
+164,82,30.49,Weight Loss,1399,Upper Lower,5
+174,66,21.8,Muscle Gain,2121,Push Pull Legs,5
+182,60,18.11,Muscle Gain,2018,Bro Split,5
+164,99,36.81,Weight Loss,1502,Upper Lower,5
+180,54,16.67,Muscle Gain,1928,Bro Split,5
+178,55,17.36,Muscle Gain,1871,Push Pull Legs,6
+184,69,20.38,Muscle Gain,2185,Push Pull Legs,6
+165,107,39.3,Weight Loss,1627,Upper Lower,4
+155,72,29.97,Weight Loss,1238,Upper Lower,4
+190,69,19.11,Muscle Gain,2254,Push Pull Legs,5
+158,68,27.24,Maintenance,1547,Upper Lower,5
+163,91,34.25,Weight Loss,1336,Upper Lower,4
+159,70,27.69,Maintenance,1573,Upper Lower,4

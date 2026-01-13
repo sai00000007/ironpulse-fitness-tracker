@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>📊 Workout History</h1>
+
+<div id="historyContainer"></div>
+
+<div class="history-actions">
+    <a href="/workout" class="btn">➕ Add New Workout</a>
+    <button class="btn danger" onclick="clearHistory()">🗑 Clear History</button>
+</div>
+
+<script>
+function loadHistory() {
+    const container = document.getElementById("historyContainer");
+    const workouts = JSON.parse(localStorage.getItem("workouts")) || [];
+
+    if (workouts.length === 0) {
+        container.innerHTML = "<p>No workouts added yet.</p>";
+        return;
+    }
+
+    let html = `
+        <table>
+            <tr>
+                <th>Exercise</th>
+                <th>Set Details</th>
+            </tr>
+    `;
+
+    workouts.forEach(w => {
+        html += `<tr>
+            <td><b>${w.exercise}</b></td>
+            <td>`;
+        w.reps.forEach((rep, i) => {
+            html += `Set ${i+1}: ${rep} reps @ ${w.weights[i]} kg<br>`;
+        });
+        html += `</td></tr>`;
+    });
+
+    html += "</table>";
+    container.innerHTML = html;
+}
+
+function clearHistory() {
+    if (confirm("Clear all workout history?")) {
+        localStorage.removeItem("workouts");
+        loadHistory();
+    }
+}
+
+loadHistory();
+</script>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="about-container reveal">
+
+    <!-- 🔥 KEEP YOUR IMAGE GALLERY EXACTLY AS IT IS -->
+    <div class="about-gallery">
+        <!-- your existing images here (DO NOT CHANGE) -->
+        <img src="{{ url_for('static', filename='images/me2.jpg') }}">
+        <img src="{{ url_for('static', filename='images/me4.jpg') }}">
+        <img src="{{ url_for('static', filename='images/me3.jpg') }}">
+    </div>
+
+    <!-- 🔁 UPDATED TEXT CONTENT -->
+    <div class="about-details">
+
+        <h3>💪 What is IRONPULSE?</h3>
+        <p>
+            IRONPULSE is a smart fitness tracking and recommendation web application
+            designed to help users monitor workouts, calculate BMI, and receive
+            personalized fitness guidance.
+        </p>
+
+        <h3>🧠 Machine Learning Integration</h3>
+        <p>
+            The application integrates machine learning models trained on structured
+            fitness data to predict user fitness goals, recommended calorie intake,
+            workout splits, and optimal training days based on body metrics.
+        </p>
+
+        <h3>📊 Key Features</h3>
+        <ul>
+            <li>Workout tracking with progress visualization</li>
+            <li>BMI calculator with real-time feedback</li>
+            <li>Machine learning–based fitness recommendations</li>
+            <li>Interactive charts for insights and trends</li>
+        </ul>
+
+        <h3>🛠 Technologies Used</h3>
+        <ul>
+            <li><b>Frontend:</b> HTML, CSS, JavaScript, Chart.js</li>
+            <li><b>Backend:</b> Python, Flask</li>
+            <li><b>Database:</b> SQLite</li>
+            <li><b>Machine Learning:</b> Scikit-learn</li>
+        </ul>
+
+        <h3>🚀 Project Status</h3>
+        <p>
+            IRONPULSE is a continuously evolving project focused on performance,
+            clean UI/UX, and practical machine learning integration.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

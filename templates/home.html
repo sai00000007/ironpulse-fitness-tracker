@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+    <h1 class="reveal scale">Transform Your Fitness Journey</h1>
+
+    <p class="reveal">
+        Train with purpose. Track every rep. Build real strength.
+    </p>
+
+    <div class="hero-buttons reveal">
+        <a href="/workout" class="btn outline">🏋️ Start Tracking</a>
+        <a href="/bmi" class="btn outline">🧮 BMI Calculator</a>
+    </div>
+
+    <p class="hero-sub reveal">
+        IRONPULSE offers workout tracking, BMI calculation,
+        progress monitoring, and guidance on workout splits.
+    </p>
+
+    <div class="tip-box reveal">
+        <i class="fa-solid fa-dumbbell"></i>
+        New to workout splits?
+        <a href="https://sai-gym-website.netlify.app" target="_blank">
+           <button style="color:rgb(255, 0, 0); background-color: black;"> 🧠 Split Recommendation</button>
+        </a>.
+        Already familiar? Start tracking your progress.
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+    <div class="stat-box reveal">
+        <h3 id="totalWorkouts" class="counter">0</h3>
+        <p>Total Workouts</p>
+    </div>
+
+    <div class="stat-box reveal">
+        <h3 id="totalSets" class="counter">0</h3>
+        <p>Total Sets</p>
+    </div>
+
+    <div class="stat-box reveal">
+        <h3 id="totalVolume" class="counter">0</h3>
+        <p>Total Volume (kg)</p>
+    </div>
+
+    <div class="stat-box reveal">
+        <h3 id="topExercise">—</h3> <!-- ❌ NOT a counter -->
+        <p>Top Exercise</p>
+    </div>
+
+    <div class="stat-box reveal">
+        <h3 id="avgVolume" class="counter">0</h3>
+        <p>Avg / Workout</p>
+    </div>
+</section>
+
+
+<!-- CHARTS -->
+<section class="charts-section">
+    <div class="chart-box reveal left">
+        <h3>Workout Frequency</h3>
+        <canvas id="workoutChart"></canvas>
+    </div>
+
+    <div class="chart-box reveal right">
+        <h3>Volume Progress (kg)</h3>
+        <canvas id="volumeChart"></canvas>
+    </div>
+</section>
+
+<!-- STATS LOGIC -->
+<script>
+function loadProgressStats() {
+    const workouts = JSON.parse(localStorage.getItem("workouts")) || [];
+
+    let totalWorkouts = workouts.length;
+    let totalSets = 0;
+    let totalVolume = 0;
+    let exerciseCount = {};
+
+    workouts.forEach(w => {
+        totalSets += w.reps.length;
+        w.reps.forEach((rep, i) => {
+            totalVolume += Number(rep) * Number(w.weights[i]);
+        });
+        exerciseCount[w.exercise] = (exerciseCount[w.exercise] || 0) + 1;
+    });
+
+    let topExercise = "—";
+    if (Object.keys(exerciseCount).length) {
+        topExercise = Object.keys(exerciseCount)
+            .reduce((a, b) => exerciseCount[a] > exerciseCount[b] ? a : b);
+    }
+
+    document.getElementById("totalWorkouts").innerText = totalWorkouts;
+    document.getElementById("totalSets").innerText = totalSets;
+    document.getElementById("totalVolume").innerText = totalVolume.toFixed(1);
+    document.getElementById("topExercise").innerText = topExercise;
+    document.getElementById("avgVolume").innerText =
+        totalWorkouts ? (totalVolume / totalWorkouts).toFixed(1) : 0;
+}
+
+loadProgressStats();
+</script>
+
+<!-- CHART LOGIC -->
+<script>
+function loadCharts() {
+    if (window.__chartsRendered) return;
+    window.__chartsRendered = true;
+
+    const workouts = JSON.parse(localStorage.getItem("workouts")) || [];
+    if (!workouts.length) return;
+
+    const labels = [];
+    const volumes = [];
+
+    workouts.forEach((w, index) => {
+        labels.push(`Workout ${index + 1}`);
+        let v = 0;
+        w.reps.forEach((rep, i) => {
+            v += Number(rep) * Number(w.weights[i]);
+        });
+        volumes.push(v);
+    });
+
+    new Chart(document.getElementById("workoutChart"), {
+    type: "line",
+    data: {
+        labels,
+        datasets: [{
+            data: labels.map((_, i) => i + 1),
+            borderColor: "#e53935",
+            tension: 0.4
+        }]
+    },
+    options: {
+        animation: {
+            duration: 1200,
+            easing: "easeOutQuart"
+        },
+        responsive: true,
+        plugins: {
+            legend: { display: false }
+        }
+    }
+});
+
+
+    new Chart(document.getElementById("volumeChart"), {
+    type: "bar",
+    data: {
+        labels,
+        datasets: [{
+            data: volumes,
+            backgroundColor: "#ff3d3d"
+        }]
+    },
+    options: {
+        animation: {
+            duration: 1200,
+            easing: "easeOutQuart"
+        },
+        responsive: true,
+        plugins: {
+            legend: { display: false }
+        }
+    }
+});
+
+}
+
+
+
+</script>
+<script>
+function animateCounter(element, target) {
+    let current = 0;
+    const duration = 800; // ms
+    const startTime = performance.now();
+
+    function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const value = Math.floor(progress * target);
+
+        element.innerText = value;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            element.innerText = target;
+        }
+    }
+
+    requestAnimationFrame(update);
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body class="{{ page_class }}">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+    <a href="/">
+        <img src="{{ url_for('static', filename='images/test.png') }}" alt="Logo">
+        <span>IRONPULSE</span>
+    </a>
+    </div>
+
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/workout">Workout</a>
+        <a href="/history">History</a>
+        <a href="/bmi">BMI</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>Built by Sai | IRONPULSE — Track. Train. Transform.</p>
+</footer>
+<script>
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+        if (link.target === "_blank") return;
+
+        e.preventDefault();
+        document.body.style.opacity = 0;
+
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 200);
+    });
+});
+</script>
+<script>
+let chartsLoaded = false;
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("active");
+
+        /* ✅ COUNTER ANIMATION */
+        if (entry.target.classList.contains("stat-box")) {
+            const counter = entry.target.querySelector(".counter");
+            if (counter && !counter.dataset.animated) {
+                counter.dataset.animated = "true";
+                const target = Number(counter.innerText);
+                animateCounter(counter, target);
+            }
+        }
+
+        /* ✅ CHARTS LOAD ONCE */
+        if (
+            entry.target.classList.contains("chart-box") &&
+            !chartsLoaded &&
+            typeof loadCharts === "function"
+        ) {
+            loadCharts();
+            chartsLoaded = true;
+        }
+
+        observer.unobserve(entry.target);
+    });
+}, {
+    rootMargin: "0px 0px -120px 0px",
+    threshold: 0
+});
+
+/* Observe everything that animates */
+document.querySelectorAll(".reveal, .stat-box").forEach(el => {
+
+    observer.observe(el);
+});
+</script>
+<script>
+if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach(el => {
+        el.classList.add("active");
+    });
+
+    if (typeof loadCharts === "function") {
+        loadCharts();
+    }
+}
+</script>
+<script>
+function animateCounter(el, target) {
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 40));
+
+    const interval = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            el.innerText = target;
+            clearInterval(interval);
+        } else {
+            el.innerText = current;
+        }
+    }, 20);
+}
+</script>
+
+</body>
+</html>

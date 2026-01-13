@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🏋️ Add Workout</h2>
+
+<div class="form-container">
+    <input id="exercise" type="text" placeholder="Exercise name" required>
+
+    <div id="sets"></div>
+
+    <button class="btn secondary" onclick="addSet()">➕ Add Set</button>
+
+    <p style="margin-top:15px;">
+        Total Volume: <b><span id="totalVolume">0</span> kg</b>
+    </p>
+
+    <button class="btn" onclick="saveWorkout()">💾 Save Workout</button>
+</div>
+
+<script>
+let setCount = 0;
+
+function addSet(reps = "", weight = "") {
+    setCount++;
+    const row = document.createElement("div");
+    row.className = "set-row";
+    row.innerHTML = `
+        <input class="reps" type="number" placeholder="Reps" value="${reps}" oninput="updateVolume()">
+        <input class="weights" type="number" placeholder="Weight (kg)" value="${weight}" oninput="updateVolume()">
+        <button onclick="removeSet(this)">✖</button>
+    `;
+    document.getElementById("sets").appendChild(row);
+}
+
+function removeSet(btn) {
+    btn.parentElement.remove();
+    updateVolume();
+}
+
+function updateVolume() {
+    let total = 0;
+    document.querySelectorAll(".set-row").forEach(row => {
+        const reps = row.querySelector(".reps").value;
+        const weight = row.querySelector(".weights").value;
+        if (reps && weight) total += reps * weight;
+    });
+    document.getElementById("totalVolume").innerText = total;
+}
+
+function saveWorkout() {
+    const exercise = document.getElementById("exercise").value.trim();
+    const reps = [...document.querySelectorAll(".reps")].map(i => i.value);
+    const weights = [...document.querySelectorAll(".weights")].map(i => i.value);
+
+    if (!exercise || reps.length === 0) {
+        alert("Please add exercise name and at least one set.");
+        return;
+    }
+
+    if (reps.some(r => r === "") || weights.some(w => w === "")) {
+        alert("Please fill all reps and weights.");
+        return;
+    }
+
+    const workouts = JSON.parse(localStorage.getItem("workouts")) || [];
+
+    workouts.push({
+        exercise,
+        reps,
+        weights,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("workouts", JSON.stringify(workouts));
+
+    alert("Workout saved 💪");
+    window.location.href = "/history";
+}
+
+// Add one set by default
+addSet();
+</script>
+
+{% endblock %}
